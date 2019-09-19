@@ -72,3 +72,34 @@ p::after {
   fill: hsl(47, 3%, 42%);
   transform: rotate(-45deg);
 }
+/*-----------Solution that "works" */
+.card {
+  outline: 5px white solid;
+  outline-offset: 10px;
+}
+/*-----------Solution */
+blockquote {
+  position: relative;
+}
+blockquote::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 20px;
+  background: white;
+  z-index: 9999;
+}
+blockquote::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 5px;
+  background: white;
+  z-index: 9999;
+}
